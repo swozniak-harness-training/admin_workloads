@@ -6,14 +6,14 @@ pipelineStages:
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 1
+  stageName: STAGE 2
   workflowName: deploy-nginx-to-qa
   workflowVariables:
   - name: k8snamespace
     value: student-24-app
 - type: ENV_STATE
   name: deploy-monitoring-qa
-  parallel: false
+  parallel: true
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 2
