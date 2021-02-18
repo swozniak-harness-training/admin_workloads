@@ -4,7 +4,4 @@ This configurations are part of hands-on labs for the Administrating Harness cou
 Their use for any other purpose is not recommended.
 
 Nginx is automatically deployed on every push
-  
-
-
-rede
+ 
