@@ -6,7 +6,7 @@ pipelineStages:
   parallel: false
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 2
+  stageName: STAGE 1
   workflowName: deploy-nginx-to-qa
   workflowVariables:
   - name: k8snamespace
@@ -16,5 +16,17 @@ pipelineStages:
   parallel: true
   skipCondition:
     type: DO_NOT_SKIP
-  stageName: STAGE 2
+  stageName: STAGE 1
   workflowName: deploy-monitoring-qa
+- type: ENV_STATE
+  name: cvcanary
+  parallel: true
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 1
+  workflowName: cvcanary
+  workflowVariables:
+  - name: verify_canary
+    value: 'yes'
+  - name: metric_verification
+    value: Prometheus
