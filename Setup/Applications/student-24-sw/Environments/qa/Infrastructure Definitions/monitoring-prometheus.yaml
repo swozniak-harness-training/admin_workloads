@@ -5,5 +5,5 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: student-24-sw
-  namespace: monitoring
+  namespace: monitoring-prometheus
   releaseName: release-${infra.kubernetes.infraId}
